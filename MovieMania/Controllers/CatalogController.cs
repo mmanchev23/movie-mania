@@ -32,20 +32,36 @@ namespace MovieMania.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Add(Film obj)
+        public IActionResult Add(Film film)
         {
-            obj.FilmId = Guid.NewGuid().ToString();
-            _db.Film.Add(obj);
-            _db.SaveChanges();
-            return RedirectToAction("CatalogIndex");
+            if(ModelState.IsValid)
+            {
+                film.FilmId = Guid.NewGuid().ToString();
+                _db.Film.Add(film);
+                _db.SaveChanges();
+                return RedirectToAction("CatalogIndex");
+            }
+            return View(film);
+            
         }
 
-        public IActionResult Delete(Film obj)
+        public IActionResult Delete(string id)
         {
-            var film = _db.Film.Where(film => film.FilmId == obj.FilmId).SingleOrDefault();
+            var film = _db.Film.Find(id);
+            ViewBag.Film = film;
+            return View(film);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeleteFilm(string id)
+        {
+            var film = _db.Film.Find(id);
+            ViewBag.Film = film;
             _db.Film.Remove(film);
             _db.SaveChanges();
             return RedirectToAction("CatalogIndex");
         }
+
     }
 }

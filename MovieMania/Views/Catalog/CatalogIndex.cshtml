@@ -14,50 +14,18 @@
 
     @if (Model.Count() > 0)
     {
-        <table class="table table-bordered table-striped" style="width: 100%">
-            <thead>
-                <tr>
-                    <th>
-                        Id
-                    </th>
-                    <th>
-                        Title
-                    </th>
-                    <th>
-                        Description
-                    </th>
-                    <th>
-                        Genre
-                    </th>
-                    <th>
-                        Rating
-                    </th>
-                    <th>
-                        ImageUrl
-                    </th>
-                    <th>
-                        TrailerUrl
-                    </th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var obj in Model)
-                {
-                    <tr>
-                        <td width="10%">@obj.FilmId</td>
-                        <td width="10%">@obj.Title</td>
-                        <td width="10%">@obj.Description</td>
-                        <td width="10%">@obj.Genre</td>
-                        <td width="10%">@obj.Rating</td>
-                        <td width="10%">@obj.ImageUrl</td>
-                        <td width="10%">@obj.TrailerUrl</td>
-                        <td width="10%"><a asp-controller="Catalog" asp-action="Delete" class="btn btn-danger">Delete Movie</a></td>
-                        <td></td>
-                    </tr>
-                }
-            </tbody>
-        </table>
+        @foreach (var obj in Model)
+        {
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="@obj.ImageUrl" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">@obj.Title</h5>
+                    <p class="card-text">@obj.Description</p>
+                    <a href="@obj.TrailerUrl" class="btn btn-primary">Trailer</a>
+                    <a asp-controller="Catalog" asp-route-Id="@obj.FilmId" asp-action="Delete" class="btn btn-danger">Delete</a>
+                </div>
+            </div> <br />
+        }
     }
     else
     {
