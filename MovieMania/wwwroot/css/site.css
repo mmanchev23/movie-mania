@@ -69,3 +69,24 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+#backgroundImage {
+    background: url('../images/pexels-pixabay-274937 (1).jpg') fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#headText {
+    color: black;
+    background-color: #fff;
+    font-family: Brush Script MT;
+}
+
+#navBarFont {
+    color: #fff;
+    font-family: Brush Script MT;
+    font-size: x-large;
+}
+
+#colorIconCatalog {
+    color: white;
+}
