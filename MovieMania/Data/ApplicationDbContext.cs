@@ -7,11 +7,11 @@ using System.Text;
 
 namespace MovieMania.Data
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDbContext : IdentityDbContext<AppUser>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
-        public DbSet<User> User { get; set; }
+        public DbSet<AppUser> User { get; set; }
         public DbSet<Film> Film { get; set; }
         public DbSet<Comment> Comment { get; set; }
     }
