@@ -51,13 +51,9 @@ namespace MovieMania.Controllers
             ViewBag.Film = film;
             return View(film);
         }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
         public IActionResult DeleteFilm(string id)
         {
-            var film = _db.Film.Find(id);
-            ViewBag.Film = film;
+            var film = _db.Film.Where(el => el.FilmId == id).Single();
             _db.Film.Remove(film);
             _db.SaveChanges();
             return RedirectToAction("CatalogIndex");

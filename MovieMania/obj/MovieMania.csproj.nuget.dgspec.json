@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ACER\\Source\\Repos\\MovieMania\\MovieMania\\MovieMania.csproj": {}
+    "C:\\Users\\ACER\\Source\\Repos\\mmanchev23\\Movie-Mania\\MovieMania\\MovieMania.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ACER\\Source\\Repos\\MovieMania\\MovieMania\\MovieMania.csproj": {
+    "C:\\Users\\ACER\\Source\\Repos\\mmanchev23\\Movie-Mania\\MovieMania\\MovieMania.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ACER\\Source\\Repos\\MovieMania\\MovieMania\\MovieMania.csproj",
+        "projectUniqueName": "C:\\Users\\ACER\\Source\\Repos\\mmanchev23\\Movie-Mania\\MovieMania\\MovieMania.csproj",
         "projectName": "MovieMania",
-        "projectPath": "C:\\Users\\ACER\\Source\\Repos\\MovieMania\\MovieMania\\MovieMania.csproj",
+        "projectPath": "C:\\Users\\ACER\\Source\\Repos\\mmanchev23\\Movie-Mania\\MovieMania\\MovieMania.csproj",
         "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ACER\\Source\\Repos\\MovieMania\\MovieMania\\obj\\",
+        "outputPath": "C:\\Users\\ACER\\Source\\Repos\\mmanchev23\\Movie-Mania\\MovieMania\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
