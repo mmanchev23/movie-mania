@@ -1,35 +1,43 @@
 ﻿@model IEnumerable<MovieMania.Models.Film>
 
-<div class="container p-3">
-    <div class="row pt-4">
-        <div class="col-6">
+<div class="container">
+    <div class="row">
+        <div class="col">
             <h2 class="text-primary">Films</h2>
         </div>
-        <div class="col-6 text-right">
+        <div class="col text-right">
             <a asp-controller="Catalog" asp-action="Add" class="btn btn-primary">
                 Add New Movie
             </a>
         </div>
     </div>
 
-    @if (Model.Count() > 0)
-    {
-        @foreach (var obj in Model)
-        {
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="@obj.ImageUrl" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">@obj.Title</h5>
-                    <p class="card-text">@obj.Description</p>
-                    <a href="@obj.TrailerUrl" class="btn btn-primary">Trailer</a>
-                    <a asp-controller="Catalog" asp-route-Id="@obj.FilmId" asp-action="Delete" class="btn btn-danger">Delete</a>
-                </div>
-            </div> <br />
-        }
-    }
-    else
-    {
-        <p>No movies to display.</p>
-    }
+    <div class="row">
+        <div class="container">
+            <div class="row">
+                @if (Model.Count() > 0)
+                {
+                    @foreach (var obj in Model)
+                    {
+                        <div class="col">
+                            <div class="card" style="width: 18rem;">
+                                <img class="card-img-top" src="@obj.ImageUrl" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">@obj.Title</h5>
+                                    <p class="card-text">@obj.Description</p>
+                                    <a href="@obj.TrailerUrl" class="btn btn-primary">Trailer</a>
+                                    <a asp-controller="Catalog" asp-route-Id="@obj.FilmId" asp-action="Delete" class="btn btn-danger">Delete</a>
+                                </div>
+                            </div> <br />
+                        </div>
+                    }
+                }
+                else
+                {
+                    <p>No movies to display.</p>
+                }
+            </div>
+        </div>
+    </div>
 </div>
 
