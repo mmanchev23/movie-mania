@@ -1,6 +1,25 @@
 ﻿@model IEnumerable<MovieMania.Models.Film>
 
 <div class="container">
+    @if ((string)TempData["FilmSuccessMessage"] == "Film was added successfully!")
+    {
+        <div class="alert alert-success text-center w-100">
+            <strong>Film was added successfully!</strong>
+        </div>
+    }
+    else if ((string)TempData["FilmDeleteMessage"] == "Film was deleted successfully!")
+    {
+        <div class="alert alert-success text-center w-100">
+            <strong>Film was deleted successfully!</strong>
+        </div>
+    }
+    else if ((string)TempData["FilmEditMessage"] == "Film was edited successfully!")
+    {
+        <div class="alert alert-success text-center w-100">
+            <strong>Film was edited successfully!</strong>
+        </div>
+    }
+
     <div class="row">
         <div class="col">
             <h2 class="text-primary">Films</h2>
@@ -12,22 +31,22 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row text-center">
         <div class="container">
             <div class="row">
                 @if (Model.Count() > 0)
                 {
                     @foreach (var obj in Model)
                     {
-                        <div class="col">
+                        <div class="col text-center">
                             <div class="card" style="width: 18rem;">
                                 <img class="card-img-top" src="@obj.ImageUrl" alt="Card image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">@obj.Title</h5>
-                                    <p class="card-text">@obj.Description</p>
+                                    <p class="card-text">@obj.Rating &#11088;</p>
                                     <a href="@obj.TrailerUrl" class="btn btn-primary">Trailer</a>
-                                    <a asp-controller="Catalog" asp-route-Id="@obj.FilmId" asp-action="Delete" class="btn btn-danger">Delete</a>
                                     <a asp-controller="Catalog" asp-route-Id="@obj.FilmId" asp-action="Edit" class="btn btn-warning">Edit</a>
+                                    <a asp-controller="Catalog" asp-route-Id="@obj.FilmId" asp-action="Delete" class="btn btn-danger">Delete</a>
                                 </div>
                             </div> <br />
                         </div>

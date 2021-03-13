@@ -39,6 +39,8 @@ namespace MovieMania.Controllers
                 film.FilmId = Guid.NewGuid().ToString();
                 _db.Film.Add(film);
                 _db.SaveChanges();
+
+                TempData["FilmSuccessMessage"] = "Film was added successfully!";
                 return RedirectToAction("CatalogIndex");
             }
 
@@ -74,6 +76,8 @@ namespace MovieMania.Controllers
 
             _db.Film.Remove(film);
             _db.SaveChanges();
+
+            TempData["FilmDeleteMessage"] = "Film was deleted successfully!";
             return RedirectToAction("CatalogIndex");
         }
 
@@ -95,21 +99,27 @@ namespace MovieMania.Controllers
             return View(film);
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult EditFilm(string id)
         {
-            var film = _db.Film.Where(el => el.FilmId == id).Single();
+            var film = _db.Film.Find(id);
+            if(film == null)
+            {
+                return NotFound();
+            }
 
-            film.Title = Request.Query["title"];
-            film.Description = Request.Query["description"];
-            film.Genre = Request.Query["genre"];
-            film.Rating = int.Parse(Request.Query["rating"]);
-            film.ImageUrl = Request.Query["imageURL"];
-            film.TrailerUrl = Request.Query["trailerURL"];
 
-            _db.Film.Update(film);
-            _db.SaveChanges();
-            return RedirectToAction("CatalogIndex");
-            
+            if (ModelState.IsValid)
+            {
+                _db.Film.Update(film);
+                _db.SaveChanges();
+
+                TempData["FilmEditMessage"] = "Film was edited successfully!";
+                return RedirectToAction("CatalogIndex");
+            }
+
+            return View(film);
         }
     }
 }

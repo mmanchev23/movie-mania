@@ -1,9 +1,9 @@
 ﻿@model MovieMania.Models.Film
 
 <form method="post" asp-action="EditFilm">
+    <input asp-for="FilmId" hidden/>
     <div class="border p-3">
 
-        @*<div asp-validation-summary="ModelOnly" class="text-danger"></div>*@
         <div class="form-group row">
             <h2 class="text-info pl-3">Edit Movie</h2>
         </div>
@@ -75,7 +75,7 @@
                     <div class="col-8 offset-4 row">
 
                         <div class="col">
-                            <a asp-controller="Catalog" asp-route-Id="@ViewBag.Film.FilmId" asp-action="EditFilm" class="btn btn-warning">Edit</a>
+                            <a asp-controller="Catalog" asp-route-Id="@ViewBag.Film.FilmId" asp-action="EditFilm" class="btn btn-warning w-100">Edit</a>
                         </div>
 
                         <div class="col">
