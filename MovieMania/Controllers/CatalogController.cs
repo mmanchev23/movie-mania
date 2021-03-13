@@ -18,7 +18,7 @@ namespace MovieMania.Controllers
             _db = db;
         }
 
-      //  [Authorize]
+        [Authorize]
         public IActionResult CatalogIndex()
         {
             IEnumerable<Film> objList = _db.Film;
@@ -41,42 +41,75 @@ namespace MovieMania.Controllers
                 _db.SaveChanges();
                 return RedirectToAction("CatalogIndex");
             }
+
             return View(film);
-            
         }
 
         public IActionResult Delete(string id)
         {
+            if (id == null || id == "")
+            {
+                return NotFound();
+            }
+
             var film = _db.Film.Find(id);
+
+            if(film == null)
+            {
+                return NotFound();
+            }
+
             ViewBag.Film = film;
             return View(film);
         }
+
         public IActionResult DeleteFilm(string id)
         {
             var film = _db.Film.Where(el => el.FilmId == id).Single();
+
+            if(film == null)
+            {
+                return NotFound();
+            }
+
             _db.Film.Remove(film);
             _db.SaveChanges();
             return RedirectToAction("CatalogIndex");
         }
+
         public IActionResult Edit(string id)
         {
+            if(id == null || id == "")
+            {
+                return NotFound();
+            }
+
             var film = _db.Film.Find(id);
+
+            if(film == null)
+            {
+                return NotFound();
+            }    
+
             ViewBag.Film = film;
             return View(film);
         }
-        public IActionResult EditFilm(string id,string title, string description, string genre, string imgURL, string trailerURL)
-        {
-            var film = _db.Film.Where(film => film.FilmId == id).SingleOrDefault();
 
-            film.Title = title;
-            film.Description = description;
-            film.Genre = genre;
-            film.ImageUrl = imgURL;
-            film.TrailerUrl = trailerURL;
+        public IActionResult EditFilm(string id)
+        {
+            var film = _db.Film.Where(el => el.FilmId == id).Single();
+
+            film.Title = Request.Query["title"];
+            film.Description = Request.Query["description"];
+            film.Genre = Request.Query["genre"];
+            film.Rating = int.Parse(Request.Query["rating"]);
+            film.ImageUrl = Request.Query["imageURL"];
+            film.TrailerUrl = Request.Query["trailerURL"];
 
             _db.Film.Update(film);
             _db.SaveChanges();
             return RedirectToAction("CatalogIndex");
+            
         }
     }
 }

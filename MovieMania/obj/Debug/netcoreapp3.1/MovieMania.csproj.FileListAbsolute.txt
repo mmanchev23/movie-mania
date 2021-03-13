@@ -3029,3 +3029,4 @@ C:\Users\ACER\Source\Repos\Movie-Mania\MovieMania\obj\Debug\netcoreapp3.1\MovieM
 C:\Users\ACER\Source\Repos\Movie-Mania\MovieMania\obj\Debug\netcoreapp3.1\MovieMania.pdb
 C:\Users\ACER\Source\Repos\Movie-Mania\MovieMania\obj\Debug\netcoreapp3.1\MovieMania.genruntimeconfig.cache
 C:\Users\ACER\Source\Repos\Movie-Mania\MovieMania\obj\Debug\netcoreapp3.1\Razor\Views\Catalog\Edit.cshtml.g.cs
+C:\Users\Мартин Манчев\Source\Repos\Movie-Mania\MovieMania\obj\Debug\netcoreapp3.1\Razor\Views\Catalog\Edit.cshtml.g.cs

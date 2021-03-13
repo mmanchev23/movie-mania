@@ -16,7 +16,7 @@
                         <label asp-for="Title"></label>
                     </div>
                     <div class="col-8">
-                        <input asp-for="Title" class="form-control" />
+                        <input asp-for="Title" class="form-control" name="title"/>
                         <span asp-validation-for="Title" class="text-danger"></span>
                     </div>
                 </div>
@@ -26,7 +26,7 @@
                         <label asp-for="Description"></label>
                     </div>
                     <div class="col-8">
-                        <input asp-for="Description" class="form-control" />
+                        <input asp-for="Description" class="form-control" name="description"/>
                         <span asp-validation-for="Description" class="text-danger"></span>
                     </div>
                 </div>
@@ -36,27 +36,27 @@
                         <label asp-for="Genre"></label>
                     </div>
                     <div class="col-8">
-                        <input asp-for="Genre" class="form-control" />
+                        <input asp-for="Genre" class="form-control" name="genre"/>
                         <span asp-validation-for="Genre" class="text-danger"></span>
                     </div>
                 </div>
-                <!--
-                    <div class="form-group row">
-                        <div class="col-4">
-                            <label asp-for="Rating"></label>
-                        </div>
-                        <div class="col-8">
-                            <input asp-for="Rating" class="form-control" />
-                            <span asp-validation-for="Rating" class="text-danger"></span>
-                        </div>
+                
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="Rating"></label>
                     </div>
-        -->
+                    <div class="col-8">
+                        <input asp-for="Rating" class="form-control" name="rating"/>
+                        <span asp-validation-for="Rating" class="text-danger"></span>
+                    </div>
+                </div>
+        
                 <div class="form-group row">
                     <div class="col-4">
                         <label asp-for="ImageUrl"></label>
                     </div>
                     <div class="col-8">
-                        <input asp-for="ImageUrl" class="form-control" />
+                        <input asp-for="ImageUrl" class="form-control" name="imageURL"/>
                         <span asp-validation-for="ImageUrl" class="text-danger"></span>
                     </div>
                 </div>
@@ -66,7 +66,7 @@
                         <label asp-for="TrailerUrl"></label>
                     </div>
                     <div class="col-8">
-                        <input asp-for="TrailerUrl" class="form-control" />
+                        <input asp-for="TrailerUrl" class="form-control" name="trailerURL"/>
                         <span asp-validation-for="TrailerUrl" class="text-danger"></span>
                     </div>
                 </div>
