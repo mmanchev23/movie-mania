@@ -8972,19 +8972,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ibrishimov55\\.nuget\\packages\\": {}
+    "C:\\Users\\ACER\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ibrishimov55\\Desktop\\School\\Movie-Mania-main\\MovieMania\\MovieMania.csproj",
+      "projectUniqueName": "C:\\Users\\ACER\\Source\\Repos\\Movie-Mania\\MovieMania\\MovieMania.csproj",
       "projectName": "MovieMania",
-      "projectPath": "C:\\Users\\ibrishimov55\\Desktop\\School\\Movie-Mania-main\\MovieMania\\MovieMania.csproj",
-      "packagesPath": "C:\\Users\\ibrishimov55\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ibrishimov55\\Desktop\\School\\Movie-Mania-main\\MovieMania\\obj\\",
+      "projectPath": "C:\\Users\\ACER\\Source\\Repos\\Movie-Mania\\MovieMania\\MovieMania.csproj",
+      "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ACER\\Source\\Repos\\Movie-Mania\\MovieMania\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ibrishimov55\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

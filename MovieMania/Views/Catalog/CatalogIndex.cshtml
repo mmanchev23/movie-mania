@@ -27,6 +27,7 @@
                                     <p class="card-text">@obj.Description</p>
                                     <a href="@obj.TrailerUrl" class="btn btn-primary">Trailer</a>
                                     <a asp-controller="Catalog" asp-route-Id="@obj.FilmId" asp-action="Delete" class="btn btn-danger">Delete</a>
+                                    <a asp-controller="Catalog" asp-route-Id="@obj.FilmId" asp-action="Edit" class="btn btn-warning">Edit</a>
                                 </div>
                             </div> <br />
                         </div>

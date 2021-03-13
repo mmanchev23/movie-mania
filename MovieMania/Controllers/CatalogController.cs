@@ -18,7 +18,7 @@ namespace MovieMania.Controllers
             _db = db;
         }
 
-        [Authorize]
+      //  [Authorize]
         public IActionResult CatalogIndex()
         {
             IEnumerable<Film> objList = _db.Film;
@@ -58,6 +58,25 @@ namespace MovieMania.Controllers
             _db.SaveChanges();
             return RedirectToAction("CatalogIndex");
         }
+        public IActionResult Edit(string id)
+        {
+            var film = _db.Film.Find(id);
+            ViewBag.Film = film;
+            return View(film);
+        }
+        public IActionResult EditFilm(string id,string title, string description, string genre, string imgURL, string trailerURL)
+        {
+            var film = _db.Film.Where(film => film.FilmId == id).SingleOrDefault();
 
+            film.Title = title;
+            film.Description = description;
+            film.Genre = genre;
+            film.ImageUrl = imgURL;
+            film.TrailerUrl = trailerURL;
+
+            _db.Film.Update(film);
+            _db.SaveChanges();
+            return RedirectToAction("CatalogIndex");
+        }
     }
 }

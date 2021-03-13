@@ -1,0 +1,102 @@
+﻿@model MovieMania.Models.Film
+
+<form method="post" asp-action="EditFilm">
+    <div class="border p-3">
+
+        @*<div asp-validation-summary="ModelOnly" class="text-danger"></div>*@
+        <div class="form-group row">
+            <h2 class="text-info pl-3">Edit Movie</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-8">
+
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="Title"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="Title" class="form-control" />
+                        <span asp-validation-for="Title" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="Description"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="Description" class="form-control" />
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="Genre"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="Genre" class="form-control" />
+                        <span asp-validation-for="Genre" class="text-danger"></span>
+                    </div>
+                </div>
+                <!--
+                    <div class="form-group row">
+                        <div class="col-4">
+                            <label asp-for="Rating"></label>
+                        </div>
+                        <div class="col-8">
+                            <input asp-for="Rating" class="form-control" />
+                            <span asp-validation-for="Rating" class="text-danger"></span>
+                        </div>
+                    </div>
+        -->
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="ImageUrl"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="ImageUrl" class="form-control" />
+                        <span asp-validation-for="ImageUrl" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="TrailerUrl"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="TrailerUrl" class="form-control" />
+                        <span asp-validation-for="TrailerUrl" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-8 offset-4 row">
+
+                        <div class="col">
+                            <a asp-controller="Catalog" asp-route-Id="@ViewBag.Film.FilmId" asp-action="EditFilm" class="btn btn-warning">Edit</a>
+                        </div>
+
+                        <div class="col">
+                            <a asp-action="CatalogIndex" class="btn btn-success w-100"><i class="fas fa-sign-out-alt"></i>Back</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                @* Keep this empty *@
+            </div>
+        </div>
+    </div>
+
+</form>
+
+@section Scripts{
+
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+
+}
