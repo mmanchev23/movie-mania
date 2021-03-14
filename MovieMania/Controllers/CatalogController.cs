@@ -99,27 +99,20 @@ namespace MovieMania.Controllers
             return View(film);
         }
 
-        public IActionResult EditFilm(string id, string title, string description, string genre, int rating, string imageURL, string trailerUrl)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(Film film)
         {
-            var film = _db.Film.Where(el => el.FilmId == id).Single();
-
-            if (film == null)
+            if(ModelState.IsValid)
             {
-                return NotFound();
+                _db.Film.Update(film);
+                _db.SaveChanges();
+
+                TempData["FilmEditMessage"] = "Film was edited successfully!";
+                return RedirectToAction("CatalogIndex");
             }
 
-            film.Title = title;
-            film.Description = description;
-            film.Genre = genre;
-            film.Rating = rating;
-            film.ImageUrl = imageURL;
-            film.TrailerUrl = trailerUrl;
-
-            _db.Film.Update(film);
-            _db.SaveChanges();
-
-            TempData["FilmEditMessage"] = "Film was edited successfully!";
-            return RedirectToAction("CatalogIndex");
+            return View(film);
         }
     }
 }
