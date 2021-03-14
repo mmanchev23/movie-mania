@@ -1,7 +1,6 @@
 ﻿@model MovieMania.Models.Film
 
-<form method="post" asp-action="EditFilm">
-    <input asp-for="FilmId" hidden/>
+<form method="post" asp-action="EditFilm" runat="server">
     <div class="border p-3">
 
         <div class="form-group row">
@@ -16,7 +15,7 @@
                         <label asp-for="Title"></label>
                     </div>
                     <div class="col-8">
-                        <input asp-for="Title" class="form-control" name="title"/>
+                        <input asp-for="Title" class="form-control" id="title" name="title" type="text"/>
                         <span asp-validation-for="Title" class="text-danger"></span>
                     </div>
                 </div>
@@ -26,7 +25,7 @@
                         <label asp-for="Description"></label>
                     </div>
                     <div class="col-8">
-                        <input asp-for="Description" class="form-control" name="description"/>
+                        <input asp-for="Description" class="form-control" id="description" name="description" type="text"/>
                         <span asp-validation-for="Description" class="text-danger"></span>
                     </div>
                 </div>
@@ -36,7 +35,7 @@
                         <label asp-for="Genre"></label>
                     </div>
                     <div class="col-8">
-                        <input asp-for="Genre" class="form-control" name="genre"/>
+                        <input asp-for="Genre" class="form-control" id="genre" name="genre" type="text"/>
                         <span asp-validation-for="Genre" class="text-danger"></span>
                     </div>
                 </div>
@@ -46,7 +45,7 @@
                         <label asp-for="Rating"></label>
                     </div>
                     <div class="col-8">
-                        <input asp-for="Rating" class="form-control" name="rating"/>
+                        <input asp-for="Rating" class="form-control" id="rating" name="rating" type="number"/>
                         <span asp-validation-for="Rating" class="text-danger"></span>
                     </div>
                 </div>
@@ -56,7 +55,7 @@
                         <label asp-for="ImageUrl"></label>
                     </div>
                     <div class="col-8">
-                        <input asp-for="ImageUrl" class="form-control" name="imageURL"/>
+                        <input asp-for="ImageUrl" class="form-control" id="imageURL" name="imageURL" type="url"/>
                         <span asp-validation-for="ImageUrl" class="text-danger"></span>
                     </div>
                 </div>
@@ -66,7 +65,7 @@
                         <label asp-for="TrailerUrl"></label>
                     </div>
                     <div class="col-8">
-                        <input asp-for="TrailerUrl" class="form-control" name="trailerURL"/>
+                        <input asp-for="TrailerUrl" class="form-control" id="trailerURL" name="trailerURL" type="url"/>
                         <span asp-validation-for="TrailerUrl" class="text-danger"></span>
                     </div>
                 </div>

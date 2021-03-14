@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "t3gZr59wqZJid5FeXY5Pxsw7O54dsz5lnKgph45gtrdYGE50U2HvBQ4BZZU3iPAXgJTRV0f+SYEKieEbtjVHYw==",
+  "dgSpecHash": "TOIZL2ChQ0wJmwURNtAx1kvnB9d0juZY1PeK4P7WARlyl/dwn0NpzwbK9H5pS90RAV3LNgM5ZLloyFbn1bdQIg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Мартин Манчев\\Source\\Repos\\Movie-Mania\\MovieMania\\MovieMania.csproj",
+  "projectFilePath": "C:\\Users\\Мартин Манчев\\source\\repos\\Movie-Mania\\MovieMania\\MovieMania.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Мартин Манчев\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.11\\microsoft.aspnetcore.cryptography.internal.3.1.11.nupkg.sha512",
     "C:\\Users\\Мартин Манчев\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.11\\microsoft.aspnetcore.cryptography.keyderivation.3.1.11.nupkg.sha512",
