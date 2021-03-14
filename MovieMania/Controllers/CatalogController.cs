@@ -121,5 +121,12 @@ namespace MovieMania.Controllers
 
             return RedirectToAction("CatalogIndex");
         }
+
+        public IActionResult Film(string id)
+        {
+            var film = _db.Film.Where(el => el.FilmId == id).Single();
+            ViewBag.Film = film;
+            return View(film);
+        }
     }
 }

@@ -1,0 +1,23 @@
+﻿<div class="card" style="width: 50%;">
+    <img src="@ViewBag.Film.ImageUrl" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title text-center">"@ViewBag.Film.Title" - @ViewBag.Film.Genre</h5>
+        <p class="text-center">
+            @ViewBag.Film.Description
+            <hr />
+            <div class="text-center">@ViewBag.Film.Rating &#11088;</div>
+        </p>
+        <div class="text-center">
+            <a href="@ViewBag.Film.TrailerUrl" class="btn btn-primary">Trailer</a>
+            <a asp-action="CatalogIndex" class="btn btn-success"><i class="fas fa-sign-out-alt"></i>Back</a>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+
+}
