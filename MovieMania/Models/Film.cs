@@ -23,5 +23,6 @@ namespace MovieMania.Models
         public string ImageUrl { get; set; }
         [Required]
         public string TrailerUrl { get; set; }
+        public List<Comment> Comment { get; set; }
     }
 }

@@ -114,5 +114,12 @@ namespace MovieMania.Controllers
 
             return View(film);
         }
+
+        public IActionResult Search(string title)
+        {
+            var film = _db.Film.Find(title);
+
+            return RedirectToAction("CatalogIndex");
+        }
     }
 }
