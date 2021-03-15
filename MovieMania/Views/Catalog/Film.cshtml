@@ -1,16 +1,44 @@
-﻿<div class="card" style="width: 15rem;">
-    <img src="@ViewBag.Film.ImageUrl" class="card-img-top" alt="...">
-    <div class="card-body">
-        <h5 class="card-title text-center">"@ViewBag.Film.Title" - @ViewBag.Film.Genre</h5>
-        <p class="text-center">
-            @ViewBag.Film.Description
-            <hr />
-            <div class="text-center">@ViewBag.Film.Rating &#11088;</div>
-        </p>
-        <div class="text-center">
-            <a href="@ViewBag.Film.TrailerUrl" class="btn btn-primary">Trailer</a>
-            <a asp-action="CatalogIndex" class="btn btn-success"><i class="fas fa-sign-out-alt"></i>Back</a>
+﻿@model MovieMania.Models.Film
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card" style="width: 15rem;">
+                <img src="@Model.ImageUrl" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-center">"@Model.Title" - @Model.Genre</h5>
+                    <p class="text-center">
+                        @Model.Description
+                        <hr />
+                        <div class="text-center">@Model.Rating &#11088;</div>
+                    </p>
+                    <div class="text-center">
+                        <a href="@Model.TrailerUrl" class="btn btn-primary">Trailer</a>
+                        <a asp-action="CatalogIndex" class="btn btn-success"><i class="fas fa-sign-out-alt"></i>Back</a>
+                    </div>
+                </div>
+            </div>
         </div>
+        @*<div class="col">
+            @if(ViewBag.Comment.Count() > 0)
+            {
+                foreach (var comment in ViewBag.Comment)
+                {
+                    <div>
+                        Written from @ViewBag.Comments.UserId:
+                        @ViewBag.Comments.Content
+                    </div>
+                }
+            }
+            else
+            {
+                <p>No comments yet.</p>
+            }
+            <form asp-controller="Catalog" asp-action="AddComment" method="post">
+                <textarea type="text" />
+                <input type="submit" class="btn btn-info w-100" value="Add" />
+            </form>
+        </div>*@
     </div>
 </div>
 

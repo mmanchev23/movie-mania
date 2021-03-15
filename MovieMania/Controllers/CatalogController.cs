@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using MovieMania.Data;
 using MovieMania.Models;
 using System;
@@ -19,10 +20,41 @@ namespace MovieMania.Controllers
         }
 
         [Authorize]
-        public IActionResult CatalogIndex()
+        public IActionResult CatalogIndex(string sortOrder, string searchString)
         {
-            IEnumerable<Film> objList = _db.Film;
-            return View(objList);
+            ViewBag.TitleSortOrder = String.IsNullOrEmpty(sortOrder) ? "title_desc" : "";
+            ViewBag.DescriptionSortOrder = String.IsNullOrEmpty(sortOrder) ? "description_desc" : "";
+            ViewBag.GenreSortOrder = String.IsNullOrEmpty(sortOrder) ? "genre_desc" : "";
+            ViewBag.RatingSortOrder = String.IsNullOrEmpty(sortOrder) ? "rating_desc" : "";
+            ViewData["CurrentFilter"] = searchString;
+
+            var Films = from f in _db.Film select f;
+
+            if(!String.IsNullOrEmpty(searchString))
+            {
+                Films = Films.Where(f => f.Title.Contains(searchString));
+            }
+
+            switch (sortOrder)
+            {
+                case "title_desc":
+                    Films = Films.OrderByDescending(b => b.Title);
+                    break;
+                case "description_desc":
+                    Films = Films.OrderByDescending(b => b.Description);
+                    break;
+                case "genre_desc":
+                    Films = Films.OrderByDescending(b => b.Genre);
+                    break;
+                case "rating_desc":
+                    Films = Films.OrderByDescending(b => b.Rating);
+                    break;
+                default:
+                    Films = Films.OrderBy(b => b.Title);
+                    break;
+            }
+
+            return View(Films);
         }
 
         public IActionResult Add()
@@ -126,6 +158,20 @@ namespace MovieMania.Controllers
             var film = _db.Film.Where(el => el.FilmId == id).Single();
             ViewBag.Film = film;
             return View(film);
+        }
+
+        public IActionResult AddComment(Comment comment)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Comment.Add(comment);
+                _db.SaveChanges();
+
+                TempData["FilmSuccessMessage"] = "Film was added successfully!";
+                return RedirectToAction("CatalogIndex");
+            }
+
+            return RedirectToAction("Film");
         }
     }
 }

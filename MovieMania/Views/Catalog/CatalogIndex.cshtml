@@ -18,11 +18,30 @@
         <div class="col text-left">
             <a asp-controller="Catalog" asp-action="Add" class="btn btn-primary">Add New Movie</a>
         </div>
-        <div class="col text-center"></div>
+        <div class="col text-center">
+            <p>
+            Sort by:
+            <a asp-action="CatalogIndex" asp-route-sortOrder="@ViewBag.TitleSortOrder">Title</a>,
+            <a asp-action="CatalogIndex" asp-route-sortOrder="@ViewBag.DescriptionSortOrder">Description</a>,
+            <a asp-action="CatalogIndex" asp-route-sortOrder="@ViewBag.GenreSortOrder">Genre</a>,
+            <a asp-action="CatalogIndex" asp-route-sortOrder="@ViewBag.RatingSortOrder">Rating</a>
+            </p>
+            @*<div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Sort by
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li class="dropdown-item"><a asp-action="CatalogIndex" asp-route-sortOrder="@ViewBag.TitleSortOrder">Title</a></li>
+                    <li class="dropdown-item"><a asp-action="CatalogIndex" asp-route-sortOrder="@ViewBag.DescriptionSortOrder">Description</a></li>
+                    <li class="dropdown-item"><a asp-action="CatalogIndex" asp-route-sortOrder="@ViewBag.GenreSortOrder">Genre</a></li>
+                    <li class="dropdown-item"><a asp-action="CatalogIndex" asp-route-sortOrder="@ViewBag.RatingSortOrder">Rating</a></li>
+                </ul>
+            </div>*@
+        </div>
         <div class="col text-right">
-            <form class="form-inline my-2 my-lg-0" method="post" asp-controller="Catalog" asp-action="Search">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <form class="form-inline my-2 my-lg-0" method="get" asp-action="CatalogIndex">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search by name..." aria-label="Search" name="SearchString" value="@ViewData["CurrentFilter"]" />
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" asp-action="CatalogIndex">Search</button>
             </form>
         </div>
     </div>

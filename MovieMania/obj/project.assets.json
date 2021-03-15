@@ -8978,11 +8978,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Мартин Манчев\\Source\\Repos\\Movie-Mania\\MovieMania\\MovieMania.csproj",
+      "projectUniqueName": "C:\\Users\\Мартин Манчев\\Desktop\\Movie-Mania\\MovieMania\\MovieMania.csproj",
       "projectName": "MovieMania",
-      "projectPath": "C:\\Users\\Мартин Манчев\\Source\\Repos\\Movie-Mania\\MovieMania\\MovieMania.csproj",
+      "projectPath": "C:\\Users\\Мартин Манчев\\Desktop\\Movie-Mania\\MovieMania\\MovieMania.csproj",
       "packagesPath": "C:\\Users\\Мартин Манчев\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Мартин Манчев\\Source\\Repos\\Movie-Mania\\MovieMania\\obj\\",
+      "outputPath": "C:\\Users\\Мартин Манчев\\Desktop\\Movie-Mania\\MovieMania\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
