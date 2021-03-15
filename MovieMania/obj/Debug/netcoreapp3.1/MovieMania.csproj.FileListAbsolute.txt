@@ -3468,3 +3468,5 @@ C:\Users\Мартин Манчев\Desktop\Movie-Mania\MovieMania\obj\Debug\netc
 C:\Users\Мартин Манчев\Desktop\Movie-Mania\MovieMania\obj\Debug\netcoreapp3.1\MovieMania.dll
 C:\Users\Мартин Манчев\Desktop\Movie-Mania\MovieMania\obj\Debug\netcoreapp3.1\MovieMania.pdb
 C:\Users\Мартин Манчев\Desktop\Movie-Mania\MovieMania\obj\Debug\netcoreapp3.1\MovieMania.genruntimeconfig.cache
+C:\Users\ACER\Source\Repos\Movie-Mania\MovieMania\obj\Debug\netcoreapp3.1\Razor\Views\Catalog\Film.cshtml.g.cs
+C:\Users\ACER\Source\Repos\Movie-Mania\MovieMania\obj\Debug\netcoreapp3.1\Razor\Views\Catalog\Search.cshtml.g.cs
