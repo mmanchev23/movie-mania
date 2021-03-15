@@ -117,9 +117,8 @@ namespace MovieMania.Controllers
 
         public IActionResult Search(string title)
         {
-            var film = _db.Film.Find(title);
-
-            return RedirectToAction("CatalogIndex");
+            var film = _db.Film.Where(el => el.Title == title).Single();
+            return RedirectToAction("Film", new { id = film.FilmId });
         }
 
         public IActionResult Film(string id)

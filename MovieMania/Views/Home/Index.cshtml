@@ -2,6 +2,10 @@
     ViewData["Title"] = "Home Page"; 
 }
 <body id="backgroundImage">
+    <form class="form-inline my-2 my-lg-0" method="post" asp-controller="Catalog" asp-action="Search">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
     <div class="text-center" id="headText">
         <h1 class="display-4">Movie Mania</h1>
         <h2>Some Description...</h2>

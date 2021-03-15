@@ -15,19 +15,19 @@
     }
 
     <div class="row">
-        <div class="col">
-            <h2 class="text-primary">Films</h2>
+        <div class="col text-left">
+            <a asp-controller="Catalog" asp-action="Add" class="btn btn-primary">Add New Movie</a>
         </div>
-        <div class="col">
-            <form class="form-inline my-2 my-lg-0" method="post" asp-action="Search">
+        <div class="col text-center"></div>
+        <div class="col text-right">
+            <form class="form-inline my-2 my-lg-0" method="post" asp-controller="Catalog" asp-action="Search">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
         </div>
-        <div class="col text-right">
-            <a asp-controller="Catalog" asp-action="Add" class="btn btn-primary">Add New Movie</a>
-        </div>
     </div>
+
+    <br />
 
     <div class="row text-center">
         <div class="container">
@@ -37,11 +37,15 @@
                     @foreach (var obj in Model)
                     {
                         <div class="col text-center">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card" style="width: 19rem;">
                                 <img class="card-img-top" src="@obj.ImageUrl" alt="Card image cap">
                                 <div class="card-body">
-                                    <h5 class="card-title">@obj.Title</h5>
-                                    <p class="card-text">@obj.Rating &#11088;</p>
+                                    <h5 class="card-title">"@obj.Title" - @obj.Genre</h5>
+                                    <p class="card-text">
+                                        @obj.Description
+                                        <hr />
+                                        @obj.Rating &#11088;
+                                    </p>
                                     <a asp-controller="Catalog" asp-route-Id="@obj.FilmId" asp-action="Film" class="btn btn-primary">Details</a>
                                     <a asp-controller="Catalog" asp-route-Id="@obj.FilmId" asp-action="Edit" class="btn btn-warning">Edit</a>
                                     <a asp-controller="Catalog" asp-route-Id="@obj.FilmId" asp-action="Delete" class="btn btn-danger">Delete</a>
@@ -52,7 +56,7 @@
                 }
                 else
                 {
-                    <p>No movies to display.</p>
+                    <br /><p>No movies to display.</p><br />
                 }
             </div>
         </div>
