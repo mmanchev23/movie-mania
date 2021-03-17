@@ -158,5 +158,62 @@ namespace MovieManiaTests
             Assert.AreEqual(user.PasswordHash, "password");
             Assert.IsNotNull(user.PasswordHash);
         }
+        [Test]
+        public void TestCommentModelIdPropertie()
+        {
+            //Arrange
+            var comment = new Comment();
+
+            //Act
+            comment.Id = "id";
+
+            //Assert
+            Assert.AreEqual(comment.Id, "id");
+            Assert.IsNotNull(comment.Id);
+        }
+        [Test]
+        public void TestCommentModelUserIdPropertie()
+        {
+            //Arrange
+            var comment = new Comment();
+
+            //Act
+            comment.UserId = "UserId";
+
+            //Assert
+            Assert.AreEqual(comment.UserId, "UserId");
+            Assert.IsNotNull(comment.UserId);
+        }
+        [Test]
+        public void TestCommentModelFilmId()
+        {
+            //Arrange
+            var comment = new Comment();
+
+            //Act
+            comment.FilmId = "FilmId";
+
+            //Assert
+            Assert.AreEqual(comment.FilmId, "FilmId");
+            Assert.IsNotNull(comment.FilmId);
+        }
+        //[Test]
+        //public void TestCommentModelTime()
+        //{
+
+        //}
+        [Test]
+        public void TestCommentModel()
+        {
+            //Arrange
+            var comment = new Comment();
+
+            //Act
+            comment.Content = "Content";
+
+            //Assert
+            Assert.AreEqual(comment.Content, "Content");
+            Assert.IsNotNull(comment.Content);
+        }
     }
 }
