@@ -78,7 +78,8 @@ body {
 #headText {
     color: black;
     background-color: #fff;
-    font-family: Brush Script MT;
+    font-family: 'Brush Script MT';
+    margin-top: 330px;
 }
 
 #navBarFont {

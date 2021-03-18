@@ -978,3 +978,4 @@ C:\Users\Мартин Манчев\Desktop\Movie-Mania\MovieManiaTests\obj\Debug
 C:\Users\Мартин Манчев\Desktop\Movie-Mania\MovieManiaTests\obj\Debug\netcoreapp3.1\MovieManiaTests.dll
 C:\Users\Мартин Манчев\Desktop\Movie-Mania\MovieManiaTests\obj\Debug\netcoreapp3.1\MovieManiaTests.pdb
 C:\Users\Мартин Манчев\Desktop\Movie-Mania\MovieManiaTests\obj\Debug\netcoreapp3.1\MovieManiaTests.genruntimeconfig.cache
+C:\Users\Мартин Манчев\source\repos\Movie-Mania\MovieManiaTests\bin\Debug\netcoreapp3.1\MovieMania.StaticWebAssets.xml

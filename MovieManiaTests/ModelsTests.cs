@@ -6,7 +6,7 @@ namespace MovieManiaTests
     public class ModelsTests
     {
         [Test]
-        public void TestFilmModelIdPropertie()
+        public void TestFilmModelId()
         {
             //Arrange
             var film = new Film();
@@ -20,7 +20,7 @@ namespace MovieManiaTests
         }
 
         [Test]
-        public void TestFilmModelTitlePropertie()
+        public void TestFilmModelTitle()
         {
             //Arrange
             var film = new Film();
@@ -34,7 +34,7 @@ namespace MovieManiaTests
         }
 
         [Test]
-        public void TestFilmModelDescriptionPropertie()
+        public void TestFilmModelDescription()
         {
             //Arrange
             var film = new Film();
@@ -48,7 +48,7 @@ namespace MovieManiaTests
         }
 
         [Test]
-        public void TestFilmModelGenrePropertie()
+        public void TestFilmModelGenre()
         {
             //Arrange
             var film = new Film();
@@ -62,7 +62,7 @@ namespace MovieManiaTests
         }
 
         [Test]
-        public void TestFilmModelRatingPropertie()
+        public void TestFilmModelRating()
         {
             //Arrange
             var film = new Film();
@@ -76,7 +76,7 @@ namespace MovieManiaTests
         }
 
         [Test]
-        public void TestFilmModelImagePropertie()
+        public void TestFilmModelImage()
         {
             //Arrange
             var film = new Film();
@@ -90,7 +90,7 @@ namespace MovieManiaTests
         }
 
         [Test]
-        public void TestFilmModelTrailerPropertie()
+        public void TestFilmModelTrailer()
         {
             //Arrange
             var film = new Film();
@@ -104,7 +104,7 @@ namespace MovieManiaTests
         }
 
         [Test]
-        public void TestUserModelIdPropertie()
+        public void TestUserModelId()
         {
             //Arrange
             var user = new AppUser();
@@ -118,7 +118,7 @@ namespace MovieManiaTests
         }
 
         [Test]
-        public void TestUserModelUserNamePropertie()
+        public void TestUserModelUserName()
         {
             //Arrange
             var user = new AppUser();
@@ -132,7 +132,7 @@ namespace MovieManiaTests
         }
 
         [Test]
-        public void TestUserModelEmailPropertie()
+        public void TestUserModelEmail()
         {
             //Arrange
             var user = new AppUser();
@@ -146,7 +146,7 @@ namespace MovieManiaTests
         }
 
         [Test]
-        public void TestUserModelPassWordPropertie()
+        public void TestUserModelPassWord()
         {
             //Arrange
             var user = new AppUser();
@@ -159,7 +159,7 @@ namespace MovieManiaTests
             Assert.IsNotNull(user.PasswordHash);
         }
         [Test]
-        public void TestCommentModelIdPropertie()
+        public void TestCommentModelId()
         {
             //Arrange
             var comment = new Comment();
@@ -172,7 +172,7 @@ namespace MovieManiaTests
             Assert.IsNotNull(comment.Id);
         }
         [Test]
-        public void TestCommentModelUserIdPropertie()
+        public void TestCommentModelUserId()
         {
             //Arrange
             var comment = new Comment();
@@ -197,11 +197,7 @@ namespace MovieManiaTests
             Assert.AreEqual(comment.FilmId, "FilmId");
             Assert.IsNotNull(comment.FilmId);
         }
-        //[Test]
-        //public void TestCommentModelTime()
-        //{
 
-        //}
         [Test]
         public void TestCommentModel()
         {

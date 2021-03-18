@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ACER\\source\\repos\\Movie-Mania\\MovieManiaTests\\MovieManiaTests.csproj": {}
+    "C:\\Users\\Мартин Манчев\\source\\repos\\Movie-Mania\\MovieManiaTests\\MovieManiaTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ACER\\source\\repos\\Movie-Mania\\MovieManiaTests\\MovieManiaTests.csproj": {
+    "C:\\Users\\Мартин Манчев\\source\\repos\\Movie-Mania\\MovieManiaTests\\MovieManiaTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ACER\\source\\repos\\Movie-Mania\\MovieManiaTests\\MovieManiaTests.csproj",
+        "projectUniqueName": "C:\\Users\\Мартин Манчев\\source\\repos\\Movie-Mania\\MovieManiaTests\\MovieManiaTests.csproj",
         "projectName": "MovieManiaTests",
-        "projectPath": "C:\\Users\\ACER\\source\\repos\\Movie-Mania\\MovieManiaTests\\MovieManiaTests.csproj",
-        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ACER\\source\\repos\\Movie-Mania\\MovieManiaTests\\obj\\",
+        "projectPath": "C:\\Users\\Мартин Манчев\\source\\repos\\Movie-Mania\\MovieManiaTests\\MovieManiaTests.csproj",
+        "packagesPath": "C:\\Users\\Мартин Манчев\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Мартин Манчев\\source\\repos\\Movie-Mania\\MovieManiaTests\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Мартин Манчев\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -28,8 +32,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\ACER\\source\\repos\\Movie-Mania\\MovieMania\\MovieMania.csproj": {
-                "projectPath": "C:\\Users\\ACER\\source\\repos\\Movie-Mania\\MovieMania\\MovieMania.csproj"
+              "C:\\Users\\Мартин Манчев\\source\\repos\\Movie-Mania\\MovieMania\\MovieMania.csproj": {
+                "projectPath": "C:\\Users\\Мартин Манчев\\source\\repos\\Movie-Mania\\MovieMania\\MovieMania.csproj"
               }
             }
           }
@@ -79,18 +83,22 @@
         }
       }
     },
-    "C:\\Users\\ACER\\source\\repos\\Movie-Mania\\MovieMania\\MovieMania.csproj": {
+    "C:\\Users\\Мартин Манчев\\source\\repos\\Movie-Mania\\MovieMania\\MovieMania.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ACER\\source\\repos\\Movie-Mania\\MovieMania\\MovieMania.csproj",
+        "projectUniqueName": "C:\\Users\\Мартин Манчев\\source\\repos\\Movie-Mania\\MovieMania\\MovieMania.csproj",
         "projectName": "MovieMania",
-        "projectPath": "C:\\Users\\ACER\\source\\repos\\Movie-Mania\\MovieMania\\MovieMania.csproj",
-        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ACER\\source\\repos\\Movie-Mania\\MovieMania\\obj\\",
+        "projectPath": "C:\\Users\\Мартин Манчев\\source\\repos\\Movie-Mania\\MovieMania\\MovieMania.csproj",
+        "packagesPath": "C:\\Users\\Мартин Манчев\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Мартин Манчев\\source\\repos\\Movie-Mania\\MovieMania\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Мартин Манчев\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"

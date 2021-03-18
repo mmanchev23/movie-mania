@@ -147,12 +147,6 @@ namespace MovieMania.Controllers
             return View(film);
         }
 
-        public IActionResult Search(string title)
-        {
-            var film = _db.Film.Where(el => el.Title == title).Single();
-            return RedirectToAction("Film", new { id = film.FilmId });
-        }
-
         public IActionResult Film(string id)
         {
             var film = _db.Film.Where(el => el.FilmId == id).Single();
@@ -172,6 +166,11 @@ namespace MovieMania.Controllers
             }
 
             return RedirectToAction("Film");
+        }
+
+        public IActionResult Comments()
+        {
+            return View();
         }
     }
 }

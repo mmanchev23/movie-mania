@@ -1,4 +1,7 @@
 ﻿@model MovieMania.Models.Film
+@{
+    ViewData["Title"] = "Delete Film";
+}
 
 <form method="post" asp-action="DeleteFilm">
     <input asp-for="FilmId" hidden />

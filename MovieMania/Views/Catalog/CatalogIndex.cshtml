@@ -1,4 +1,7 @@
 ﻿@model IEnumerable<MovieMania.Models.Film>
+@{
+    ViewData["Title"] = "Films";
+}
 
 <div class="container">
     @if ((string)TempData["FilmSuccessMessage"] == "Film was added successfully!")
@@ -20,23 +23,23 @@
         </div>
         <div class="col text-center">
             <p>
-            Sort by:
-            <a asp-action="CatalogIndex" asp-route-sortOrder="@ViewBag.TitleSortOrder">Title</a>,
-            <a asp-action="CatalogIndex" asp-route-sortOrder="@ViewBag.DescriptionSortOrder">Description</a>,
-            <a asp-action="CatalogIndex" asp-route-sortOrder="@ViewBag.GenreSortOrder">Genre</a>,
-            <a asp-action="CatalogIndex" asp-route-sortOrder="@ViewBag.RatingSortOrder">Rating</a>
+                Sort by:
+                <a asp-action="CatalogIndex" asp-route-sortOrder="@ViewBag.TitleSortOrder">Title</a>,
+                <a asp-action="CatalogIndex" asp-route-sortOrder="@ViewBag.DescriptionSortOrder">Description</a>,
+                <a asp-action="CatalogIndex" asp-route-sortOrder="@ViewBag.GenreSortOrder">Genre</a>,
+                <a asp-action="CatalogIndex" asp-route-sortOrder="@ViewBag.RatingSortOrder">Rating</a>
             </p>
             @*<div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    Sort by
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li class="dropdown-item"><a asp-action="CatalogIndex" asp-route-sortOrder="@ViewBag.TitleSortOrder">Title</a></li>
-                    <li class="dropdown-item"><a asp-action="CatalogIndex" asp-route-sortOrder="@ViewBag.DescriptionSortOrder">Description</a></li>
-                    <li class="dropdown-item"><a asp-action="CatalogIndex" asp-route-sortOrder="@ViewBag.GenreSortOrder">Genre</a></li>
-                    <li class="dropdown-item"><a asp-action="CatalogIndex" asp-route-sortOrder="@ViewBag.RatingSortOrder">Rating</a></li>
-                </ul>
-            </div>*@
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Sort by
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li class="dropdown-item"><a asp-action="CatalogIndex" asp-route-sortOrder="@ViewBag.TitleSortOrder">Title</a></li>
+                        <li class="dropdown-item"><a asp-action="CatalogIndex" asp-route-sortOrder="@ViewBag.DescriptionSortOrder">Description</a></li>
+                        <li class="dropdown-item"><a asp-action="CatalogIndex" asp-route-sortOrder="@ViewBag.GenreSortOrder">Genre</a></li>
+                        <li class="dropdown-item"><a asp-action="CatalogIndex" asp-route-sortOrder="@ViewBag.RatingSortOrder">Rating</a></li>
+                    </ul>
+                </div>*@
         </div>
         <div class="col text-right">
             <form class="form-inline my-2 my-lg-0" method="get" asp-action="CatalogIndex">

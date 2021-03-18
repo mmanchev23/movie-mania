@@ -1,18 +1,29 @@
-﻿<div style="width: 20rem;">
-    <img src="@ViewBag.Film.ImageUrl" class="card-img-top" alt="...">
-    <h1 class="text-center">"@ViewBag.Film.Title"</h1>
-    <h2 class="text-center"> @ViewBag.Film.Rating &#11088;</h2>
-    <div class="upRight">
-        <h3 class="text-center">
-            @ViewBag.Film.Description
-        </h3>
-        <div class="text-center">
-            <a href="@ViewBag.Film.TrailerUrl" class="btn btn-primary">Trailer</a>
-            <a asp-action="CatalogIndex" class="btn btn-success"><i class="fas fa-sign-out-alt"></i>Back</a>
-            <a asp-action="CatalogI" class="btn btn-info"><i class="fas fa-sign-out-alt"></i>Comments</a>
+﻿@{
+    ViewData["Title"] = "Film";
+}
+
+<div class="row">
+
+    <div class="col text-center">
+        <div style="width: 400px;" class="card">
+            <img src="@ViewBag.Film.ImageUrl" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h1 class="text-center">"@ViewBag.Film.Title"</h1>
+                <h2 class="text-center"> @ViewBag.Film.Rating &#11088;</h2>
+            </div>
         </div>
     </div>
 
+    <div class="col text-center">
+        <div>
+            <a href="@ViewBag.Film.TrailerUrl" class="btn btn-primary">Trailer</a>
+            <a asp-action="CatalogIndex" class="btn btn-success"><i class="fas fa-sign-out-alt"></i>Back</a>
+            <a asp-action="Comments" class="btn btn-info"><i class="fas fa-sign-out-alt"></i>Comments</a>
+            <h3 class="text-center">
+                @ViewBag.Film.Description
+            </h3>
+        </div>
+    </div>
 </div>
 
 

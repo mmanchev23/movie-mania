@@ -4,6 +4,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UserSecretsId>aspnet-MovieMania-B75C55CE-A699-466B-B205-B50C34733C7A</UserSecretsId>
     <CopyRefAssembliesToPublishDirectory>false</CopyRefAssembliesToPublishDirectory>
+    <StartupObject>MovieMania.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
